@@ -203,6 +203,8 @@ class Agent:
 
         for headline in headlines.headlines:
             print(headline) ## added for debugging purpose
+            news = self.search.run(headline)
+            existing_content += headline+'\n'+news+'\n\n'
         
         return {'content': existing_content}
     
